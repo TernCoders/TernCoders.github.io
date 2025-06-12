@@ -180,7 +180,13 @@ nav {
   height: 3vw;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(90deg, rgb(0, 212, 255), rgb(9, 132, 227), rgb(163, 0, 255), rgb(255, 0, 191));
+  background: linear-gradient(
+    90deg,
+    rgb(0, 212, 255),
+    rgb(9, 132, 227),
+    rgb(163, 0, 255),
+    rgb(255, 0, 191)
+  );
   background-size: 200% 100%;
   background-position: 0% 0%;
   border-radius: 0 1.5vw;
@@ -410,7 +416,9 @@ section {
   height: fit-content;
 }
 .header {
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("school\ img.png");
+  background-image:
+    linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("school\ img.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -729,7 +737,16 @@ section {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background-image: conic-gradient(from var(--angle), rgb(196, 18, 196), pink, yellow, blue, pink, darkblue, rgb(196, 18, 196));
+  background-image: conic-gradient(
+    from var(--angle),
+    rgb(196, 18, 196),
+    pink,
+    yellow,
+    blue,
+    pink,
+    darkblue,
+    rgb(196, 18, 196)
+  );
   animation: bdrdan 2.5s infinite linear;
   z-index: 1;
 }
@@ -759,7 +776,16 @@ section {
   position: absolute;
   inset: 0;
   border-radius: 2vw;
-  background-image: conic-gradient(from var(--angle), rgb(196, 18, 196), pink, yellow, blue, pink, darkblue, rgb(196, 18, 196));
+  background-image: conic-gradient(
+    from var(--angle),
+    rgb(196, 18, 196),
+    pink,
+    yellow,
+    blue,
+    pink,
+    darkblue,
+    rgb(196, 18, 196)
+  );
   animation: bdrdan 2.5s infinite linear;
   z-index: 1;
 }
