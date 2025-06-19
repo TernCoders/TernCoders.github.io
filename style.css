@@ -137,7 +137,8 @@ html {
   scroll-padding-top: 5vw;
 }
 img {
-  height: auto !important;
+  width: auto;
+  height: auto;
 }
 strong {
   font-weight: bold;
@@ -416,8 +417,7 @@ section {
   height: fit-content;
 }
 .header {
-  background-image:
-    linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
     url("school\ img.png");
   background-size: cover;
   background-position: center;
@@ -609,9 +609,7 @@ section {
   color: #bbb;
   text-decoration: none;
   position: relative;
-  transition:
-    color 0.3s ease,
-    transform 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 .footer-column ul li a::after {
   content: "";
@@ -863,6 +861,10 @@ section {
   font-weight: 800;
   color: #4faaff;
 }
+.chapter h4 {
+  color: #10b981;
+  font-size: 1.5vw;
+}
 .chapter span {
   font-weight: bold;
 }
@@ -1076,6 +1078,9 @@ section {
   text-align: center;
   background-color: whitesmoke;
 }
+.table3 img {
+  width: 15vw;
+}
 .book {
   text-align: center;
   text-decoration: underline;
@@ -1174,6 +1179,14 @@ span.root-top::before {
 }
 .division-frame .div-TickS {
   border: none;
+}
+.ul-figure img {
+  padding: 2.5vw;
+  width: 40vw;
+}
+.aspop {
+  width: auto;
+  height: 50vh;
 }
 @media (orientation: portrait) {
   html {
@@ -1483,6 +1496,9 @@ span.root-top::before {
     font-size: 6vw;
     margin-block: 1.5vw;
   }
+  .chapter h4 {
+    font-size: 4.5vw;
+  }
   .chapter p {
     font-size: 5vw;
     margin-block: 2.5vw;
@@ -1538,6 +1554,9 @@ span.root-top::before {
     height: 7.5vw;
     font-size: 3.5vw;
   }
+  .table3 img {
+    width: 25vw;
+  }
   .heading-sst {
     font-size: 4.5vw;
     margin-block: 2vw;
@@ -1551,6 +1570,13 @@ span.root-top::before {
   }
   .division-frame:nth-of-type(4) {
     margin: 30vw 35vw;
+  }
+  .ul-figure img {
+    padding: 5vw;
+    width: 100%;
+  }
+  .aspop {
+    width: 100%;
   }
 }
 @media (orientation: portrait) and (max-width: 513px) {
