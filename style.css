@@ -1218,7 +1218,7 @@ span.root-top::before {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: calc(100vh - 5vw);
+  height: calc(150vh - 5vw);
 }
 .choose-div h1 {
   font-size: 3vw;
@@ -1678,7 +1678,7 @@ span.root-top::before {
     font-size: 4vw;
   }
   .choose-div {
-    height: calc((100vh - 10vw) / 2);
+    height: 75vh;
   }
   .choose-div h1 {
     font-size: 6vw;
@@ -1694,6 +1694,7 @@ span.root-top::before {
   .choose-sub-box {
     width: 70vw;
     height: 27.5vw;
+    margin-bottom: 7vw;
   }
   .choose-sub-box h3 {
     font-size: 5vw;
