@@ -1694,6 +1694,7 @@ span.root-top::before {
   .choose-sub-box {
     width: 70vw;
     height: 27.5vw;
+    margin-bottom: 4vw;
   }
   .choose-sub-box h3 {
     font-size: 5vw;
