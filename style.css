@@ -1364,6 +1364,7 @@ span.root-top::before {
   }
   .tern-footer .footer-logo img {
     width: 15vw;
+    height: 15vw;
   }
   .tern-footer .footer-logo span {
     font-size: 7vw;
@@ -1401,7 +1402,8 @@ span.root-top::before {
     width: 20vw;
     margin-block: 3vw;
   }
-  .img-wrapper {
+  .img-wrapper,
+  .img-wrapper img {
     width: 20vw;
     height: 20vw;
   }
@@ -1577,6 +1579,7 @@ span.root-top::before {
   }
   .aspop {
     width: 100%;
+    height: fit-content;
   }
 }
 @media (orientation: portrait) and (max-width: 513px) {
