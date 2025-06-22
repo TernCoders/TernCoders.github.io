@@ -5,6 +5,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Playpen+Sans+Deva:wght@100..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap");
 * {
   height: auto;
   width: auto;
@@ -519,7 +521,7 @@ section {
   transform: scale(1.1) rotate(360deg);
 }
 .footer-logo span {
-  font-size: 1.5em;
+  font-size: 1.5vw;
   font-weight: bold;
   transition: color 0.3s;
 }
@@ -528,7 +530,7 @@ section {
 }
 .footer-quote {
   font-style: italic;
-  font-size: 0.95em;
+  font-size: 1vw;
   color: #ccc;
   text-align: center;
   margin-bottom: 2vw;
@@ -569,7 +571,7 @@ section {
 }
 .footer-column h3 {
   margin-bottom: 1.31vw;
-  font-size: 1.2em;
+  font-size: 1.25vw;
   color: #eee;
   position: relative;
 }
@@ -1107,7 +1109,7 @@ span.root-top::before {
   cursor: pointer;
   outline: none;
   position: relative;
-  padding: 5px 0;
+  padding: 0.4vw 0;
   transition: color 0.3s ease;
 }
 .answer-btn::after {
@@ -1115,7 +1117,7 @@ span.root-top::before {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 2px;
+  height: 0.15vw;
   width: 0%;
   background-color: rgba(6, 197, 6, 0.954);
   transition: width 0.3s ease;
@@ -1130,7 +1132,7 @@ span.root-top::before {
   display: none;
   font-size: 1.5vw;
   color: blue;
-  margin-top: 10px;
+  margin-top: 0.8vw;
 }
 .p-center {
   text-align: center;
@@ -1187,6 +1189,88 @@ span.root-top::before {
 .aspop {
   width: auto;
   height: 50vh;
+}
+.div-frame-spe .quotient {
+  font-weight: bold;
+  font-size: 1.6vw;
+  padding-left: 2vw;
+}
+.div-frame-spe .div-Tick,
+.div-frame-spe .div-Tick2,
+.div-frame-spe .div-tick,
+.div-frame-spe .div-ticK {
+  font-size: 1.5vw;
+  font-family: monospace;
+  line-height: 1.8;
+  white-space: nowrap;
+}
+.div-frame-spe .div-tick {
+  border-bottom: 0.25vw solid black;
+}
+.div-frame-spe .div-Tick2 {
+  margin-top: 1vw;
+}
+.div-frame-spe .div-ticK {
+  margin-top: 1vw;
+}
+.choose-div {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: calc(100vh - 5vw);
+}
+.choose-div h1 {
+  font-size: 3vw;
+  margin-top: 3vw;
+  font-family: "Hanalei Fill", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  transition: 0.5s;
+}
+.choose-div h1:hover,
+.choose-div h3:hover,
+.choose-div p:hover {
+  color: #0000ee;
+}
+.choose-box {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vw;
+  margin-top: 2vw;
+  margin: 5vw;
+}
+.choose-sub-box {
+  text-align: center;
+  background: #fff;
+  padding: 1.5vw;
+  border-radius: 0.8vw;
+  box-shadow: 0 0.3vw 0.8vw rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 30vw;
+  height: 15vw;
+}
+.choose-sub-box:hover {
+  transform: translateY(-0.65vw);
+  box-shadow: 0 0.65vw 1.5vw rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+.choose-sub-box h3 {
+  font-size: 2vw;
+  font-weight: 900;
+  margin: 1.5vw;
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+  transition: 0.5s;
+}
+.choose-sub-box p {
+  font-size: 1.5vw;
+  transition: 0.5s;
 }
 @media (orientation: portrait) {
   html {
@@ -1580,6 +1664,42 @@ span.root-top::before {
   .aspop {
     width: 100%;
     height: fit-content;
+  }
+  .div-frame-spe {
+    font-size: 4vw;
+  }
+  .div-frame-spe .quotient {
+    font-size: 4.5vw;
+  }
+  .div-frame-spe .div-Tick,
+  .div-frame-spe .div-Tick2,
+  .div-frame-spe .div-tick,
+  .div-frame-spe .div-ticK {
+    font-size: 4vw;
+  }
+  .choose-div {
+    height: calc((100vh - 10vw) / 2);
+  }
+  .choose-div h1 {
+    font-size: 6vw;
+  }
+  .choose-div h1:hover,
+  .choose-div h3:hover,
+  .choose-div p:hover {
+    color: #0000ee;
+  }
+  .choose-box {
+    flex-direction: column;
+  }
+  .choose-sub-box {
+    width: 70vw;
+    height: 27.5vw;
+  }
+  .choose-sub-box h3 {
+    font-size: 5vw;
+  }
+  .choose-sub-box p {
+    font-size: 3.5vw;
   }
 }
 @media (orientation: portrait) and (max-width: 513px) {
