@@ -1190,28 +1190,36 @@ span.root-top::before {
   width: auto;
   height: 50vh;
 }
-.div-frame-spe .quotient {
-  font-weight: bold;
-  font-size: 1.6vw;
-  padding-left: 2vw;
+.division-frame-spe .vertical {
+  border-left: none;
+  padding-left: 0.5vw;
 }
-.div-frame-spe .div-Tick,
-.div-frame-spe .div-Tick2,
-.div-frame-spe .div-tick,
-.div-frame-spe .div-ticK {
-  font-size: 1.5vw;
-  font-family: monospace;
-  line-height: 1.8;
-  white-space: nowrap;
+.division-frame-spe .vertical::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4vw;
+  border-left: 0.3vw solid black;
 }
-.div-frame-spe .div-tick {
+.division-frame-spe .div-Tick {
+  top: -0.2vw;
+}
+.division-frame-spe .div-Tick2 {
+  top: 6.2vw;
+}
+.division-frame-spe .horizontal {
+  width: 22vw;
+}
+.division-frame-spe .div-tick {
   border-bottom: 0.25vw solid black;
+  margin-bottom: 0.5vw;
 }
-.div-frame-spe .div-Tick2 {
-  margin-top: 1vw;
+.division-frame-spe .div-ticK {
+  padding-top: 0.3vw;
 }
-.div-frame-spe .div-ticK {
-  margin-top: 1vw;
+.division-frame-spe .quotient {
+  padding-left: 1.5vw;
 }
 .choose-div {
   display: grid;
@@ -1664,18 +1672,6 @@ span.root-top::before {
   .aspop {
     width: 100%;
     height: fit-content;
-  }
-  .div-frame-spe {
-    font-size: 4vw;
-  }
-  .div-frame-spe .quotient {
-    font-size: 4.5vw;
-  }
-  .div-frame-spe .div-Tick,
-  .div-frame-spe .div-Tick2,
-  .div-frame-spe .div-tick,
-  .div-frame-spe .div-ticK {
-    font-size: 4vw;
   }
   .choose-div {
     height: fit-content;
