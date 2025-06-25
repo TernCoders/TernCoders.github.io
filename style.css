@@ -7,6 +7,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
 * {
   height: auto;
   width: auto;
@@ -792,12 +793,37 @@ section {
 .kmau-main-box-wrapper::before {
   filter: blur(1.5vw);
 }
+.typewriter-container {
+  width: 100%;
+  max-width: 90%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
 .kmau-main-box-h3 {
-  font-size: 1.7vw;
-  padding-block: 0.79vw;
-  font-family: "Noto Sans Myanmar", sans-serif;
+  display: inline-block;
+  font-size: 2vw;
+  padding-block: 1vw;
+  white-space: nowrap;
+  animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
+  overflow: hidden;
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 .kmau-main-box-p {
   font-size: 1.2vw;
@@ -1520,6 +1546,8 @@ span.root-top::before {
   }
   .kmau-main-box-h3 {
     font-size: 3.5vw;
+    animation: none;
+    white-space: normal;
   }
   .kmau-main-box-p {
     font-size: 4vw;
