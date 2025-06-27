@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", () => {
         });
       } catch (e) {
         console.warn(
-          "Could not access iframe content (CORS or browser restriction).",
+          "Could not access iframe content (CORS or browser restriction)."
         );
       }
     };
@@ -60,147 +60,94 @@ window.addEventListener("DOMContentLoaded", () => {
     })
     .catch(() => hideElements());
 });
-function showBtnAnswer1() {
-  const answer = document.getElementById("answer1");
-  if (answer.style.display === "none" || answer.style.display === "") {
-    answer.style.display = "block";
-  } else {
-    answer.style.display = "none";
+function toggleAnswer(num) {
+  const answer = document.getElementById(`answer${num}`);
+  if (answer) {
+    answer.style.display =
+      answer.style.display === "none" || answer.style.display === ""
+        ? "block"
+        : "none";
   }
 }
-function showBtnAnswer2() {
-  const answer = document.getElementById("answer2");
-  if (answer.style.display === "none" || answer.style.display === "") {
-    answer.style.display = "block";
-  } else {
-    answer.style.display = "none";
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.innerWidth > window.innerHeight) {
+    const els = document.querySelectorAll(".kmau-main-box-h3");
+    els.forEach((el) => {
+      const text = el.textContent.trim();
+      el.innerHTML = "";
+      el.style.position = "relative";
+      const line = document.createElement("span");
+      line.style.display = "inline";
+      line.style.fontFamily = '"Sora",sans-serif';
+      line.style.fontWeight = "bold";
+      const cursor = document.createElement("span");
+      cursor.className = "cursor";
+      cursor.style.position = "absolute";
+      el.appendChild(line);
+      el.appendChild(cursor);
+      let charIndex = 0;
+      function typeChar() {
+        if (charIndex <= text.length) {
+          line.textContent = text.slice(0, charIndex);
+          cursor.style.left = `${line.offsetWidth}px`;
+          charIndex++;
+          setTimeout(typeChar, 50);
+        } else {
+          cursor.remove();
+        }
+      }
+      typeChar();
+    });
   }
-}
-function showBtnAnswer3() {
-  const answer = document.getElementById("answer3");
-  if (answer.style.display === "none" || answer.style.display === "") {
-    answer.style.display = "block";
-  } else {
-    answer.style.display = "none";
+});
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.innerHeight >= window.innerWidth) {
+    const els = document.querySelectorAll(".kmau-main-box-h3");
+    els.forEach((el) => {
+      const full = el.textContent.trim();
+      const test = document.createElement("div");
+      test.style.position = "absolute";
+      test.style.visibility = "hidden";
+      test.style.fontFamily = '"Sora",sans-serif';
+      test.style.fontWeight = "bold";
+      test.style.fontSize = getComputedStyle(el).fontSize;
+      test.style.width = getComputedStyle(el).width;
+      test.style.whiteSpace = "normal";
+      test.innerText = full;
+      document.body.appendChild(test);
+      const lineHeight = parseFloat(getComputedStyle(test).fontSize) * 1.5;
+      const lines = Math.ceil(test.clientHeight / lineHeight);
+      el.style.minHeight = `${lines * lineHeight}px`;
+      document.body.removeChild(test);
+      const words = full.split(/\s+/);
+      el.innerHTML = "";
+      let wordIndex = 0;
+      function typeLine() {
+        if (wordIndex >= words.length) return;
+        const line = document.createElement("div");
+        line.style.display = "block";
+        line.style.fontFamily = '"Sora",sans-serif';
+        line.style.fontWeight = "bold";
+        const cursor = document.createElement("span");
+        cursor.className = "cursor";
+        el.appendChild(line);
+        let group = words.slice(wordIndex, wordIndex + 3).join(" ");
+        let charIndex = 0;
+        function typeChar() {
+          if (charIndex <= group.length) {
+            line.textContent = group.slice(0, charIndex);
+            line.appendChild(cursor);
+            charIndex++;
+            setTimeout(typeChar, 50);
+          } else {
+            line.removeChild(cursor);
+            wordIndex += 3;
+            setTimeout(typeLine);
+          }
+        }
+        typeChar();
+      }
+      typeLine();
+    });
   }
-}
-function showBtnAnswer4() {
-  const answer = document.getElementById("answer4");
-  if (answer.style.display === "none" || answer.style.display === "") {
-    answer.style.display = "block";
-  } else {
-    answer.style.display = "none";
-  }
-}
-function showBtnAnswer5() {
-  const answer = document.getElementById("answer5");
-  if (answer.style.display === "none" || answer.style.display === "") {
-    answer.style.display = "block";
-  } else {
-    answer.style.display = "none";
-  }
-}
-function showBtnAnswer6() {
-  const answer = document.getElementById("answer6");
-  if (answer.style.display === "none" || answer.style.display === "") {
-    answer.style.display = "block";
-  } else {
-    answer.style.display = "none";
-  }
-}
-function showBtnAnswer7() {
-  const answer = document.getElementById("answer7");
-  if (answer.style.display === "none" || answer.style.display === "") {
-    answer.style.display = "block";
-  } else {
-    answer.style.display = "none";
-  }
-}
-function showBtnAnswer8() {
-  const answer = document.getElementById("answer8");
-  if (answer.style.display === "none" || answer.style.display === "") {
-    answer.style.display = "block";
-  } else {
-    answer.style.display = "none";
-  }
-}
-function showBtnAnswer9() {
-  const answer = document.getElementById("answer9");
-  if (answer.style.display === "none" || answer.style.display === "") {
-    answer.style.display = "block";
-  } else {
-    answer.style.display = "none";
-  }
-}
-function showBtnAnswer10() {
-  const answer = document.getElementById("answer10");
-  if (answer.style.display === "none" || answer.style.display === "") {
-    answer.style.display = "block";
-  } else {
-    answer.style.display = "none";
-  }
-}
-function showBtnAnswer11() {
-  const answer = document.getElementById("answer11");
-  if (answer.style.display === "none" || answer.style.display === "") {
-    answer.style.display = "block";
-  } else {
-    answer.style.display = "none";
-  }
-}
-function showBtnAnswer12() {
-  const answer = document.getElementById("answer12");
-  if (answer.style.display === "none" || answer.style.display === "") {
-    answer.style.display = "block";
-  } else {
-    answer.style.display = "none";
-  }
-}
-function showBtnAnswer13() {
-  const answer = document.getElementById("answer13");
-  if (answer.style.display === "none" || answer.style.display === "") {
-    answer.style.display = "block";
-  } else {
-    answer.style.display = "none";
-  }
-}
-function showBtnAnswer14() {
-  const answer = document.getElementById("answer14");
-  if (answer.style.display === "none" || answer.style.display === "") {
-    answer.style.display = "block";
-  } else {
-    answer.style.display = "none";
-  }
-}
-function showBtnAnswer15() {
-  const answer = document.getElementById("answer15");
-  if (answer.style.display === "none" || answer.style.display === "") {
-    answer.style.display = "block";
-  } else {
-    answer.style.display = "none";
-  }
-}
-function showBtnAnswer16() {
-  const answer = document.getElementById("answer16");
-  if (answer.style.display === "none" || answer.style.display === "") {
-    answer.style.display = "block";
-  } else {
-    answer.style.display = "none";
-  }
-}
-function showBtnAnswer17() {
-  const answer = document.getElementById("answer17");
-  if (answer.style.display === "none" || answer.style.display === "") {
-    answer.style.display = "block";
-  } else {
-    answer.style.display = "none";
-  }
-}
-function showBtnAnswer18() {
-  const answer = document.getElementById("answer18");
-  if (answer.style.display === "none" || answer.style.display === "") {
-    answer.style.display = "block";
-  } else {
-    answer.style.display = "none";
-  }
-}
+});

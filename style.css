@@ -793,32 +793,26 @@ section {
 .kmau-main-box-wrapper::before {
   filter: blur(1.5vw);
 }
-.typewriter-container {
-  width: 100%;
-  max-width: 90%;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
 .kmau-main-box-h3 {
   display: inline-block;
   font-size: 2vw;
   padding-block: 1vw;
-  white-space: nowrap;
-  animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
   overflow: hidden;
+  white-space: nowrap;
   font-family: "Sora", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
+  overflow: visible;
 }
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+.cursor {
+  position: absolute;
+  display: inline-block;
+  width: 0.1em;
+  height: 1em;
+  background-color: black;
+  animation: blink 0.3s step-end infinite;
+  pointer-events: none;
 }
 @keyframes blink {
   50% {
@@ -1200,10 +1194,10 @@ span.root-top::before {
   border-bottom: 0.3vw solid black;
 }
 .division-frame .div-Tick {
-  top: -0.05vw;
+  top: -0.25vw;
 }
 .division-frame .div-Tick2 {
-  top: 5.4vw;
+  top: 5.15vw;
 }
 .division-frame .div-TickS {
   border: none;
@@ -1216,36 +1210,39 @@ span.root-top::before {
   width: auto;
   height: 50vh;
 }
-.division-frame-spe .vertical {
-  border-left: none;
-  padding-left: 0.5vw;
-}
-.division-frame-spe .vertical::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 4vw;
-  border-left: 0.3vw solid black;
-}
-.division-frame-spe .div-Tick {
-  top: -0.2vw;
-}
-.division-frame-spe .div-Tick2 {
-  top: 6.2vw;
+.division-frame-spe {
+  margin-bottom: 3vw;
+  display: inline-block;
 }
 .division-frame-spe .horizontal {
-  width: 22vw;
+  width: 100%;
 }
-.division-frame-spe .div-tick {
-  border-bottom: 0.25vw solid black;
-  margin-bottom: 0.5vw;
+.division-frame-spe .vertical {
+  display: flex;
+  flex-direction: column;
+  border: none;
 }
+.division-frame-spe .vertical::before {
+  display: none;
+}
+.division-frame-spe .div-tick,
 .division-frame-spe .div-ticK {
-  padding-top: 0.3vw;
+  border-bottom: 0.3vw solid black;
+  padding-left: 0.6vw;
+}
+.division-frame-spe .div-Tick {
+  left: -3.72vw;
+  border: none;
+}
+.division-frame-spe .div-Tick3 {
+  border-left: 0.3vw solid black;
+  padding-left: 0.3vw;
+}
+.division-frame-spe .div-ticK2 {
+  text-align: right;
 }
 .division-frame-spe .quotient {
-  padding-left: 1.5vw;
+  padding-left: 0.6vw;
 }
 .choose-div {
   display: grid;
@@ -1725,6 +1722,12 @@ span.root-top::before {
   }
   .choose-sub-box p {
     font-size: 3.5vw;
+  }
+  .division-frame-spe {
+    transform: scale(3);
+  }
+  .division-frame-spe:nth-of-type(n) {
+    margin: 32.5vw 0 32.5vw 32.5vw;
   }
 }
 @media (orientation: portrait) and (max-width: 513px) {
