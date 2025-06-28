@@ -2,4 +2,5 @@ node_modules
 vendor/
 composer.json
 composer.lock
+.prettierrc
 .py
