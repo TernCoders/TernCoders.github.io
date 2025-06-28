@@ -69,6 +69,9 @@ function toggleAnswer(num) {
         : "none";
   }
 }
+for (let i = 1; i <= 18; i++) {
+  window[`showBtnAnswer${i}`] = () => toggleAnswer(i);
+}
 document.addEventListener("DOMContentLoaded", () => {
   if (window.innerWidth > window.innerHeight) {
     const els = document.querySelectorAll(".kmau-main-box-h3");

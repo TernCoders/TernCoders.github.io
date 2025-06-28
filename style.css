@@ -1154,6 +1154,9 @@ span.root-top::before {
   color: blue;
   margin-top: 0.8vw;
 }
+.answer-option .bar {
+  background-color: blue;
+}
 .p-center {
   text-align: center;
 }
@@ -1302,6 +1305,9 @@ span.root-top::before {
 .choose-sub-box p {
   font-size: 1.5vw;
   transition: 0.5s;
+}
+.chapter span.anti {
+  font-weight: normal;
 }
 @media (orientation: portrait) {
   html {
