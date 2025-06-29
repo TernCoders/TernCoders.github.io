@@ -131,13 +131,13 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+body,
 html {
-  scroll-behavior: smooth;
   overflow-x: hidden;
-  scroll-padding-top: 5vw;
+  scroll-behavior: smooth;
 }
-body {
-  font-size: 0;
+html {
+  scroll-padding-top: 5vw;
 }
 img {
   width: auto;
@@ -145,6 +145,9 @@ img {
 }
 strong {
   font-weight: 700;
+}
+body {
+  background-color: #fff;
 }
 nav {
   position: fixed;
@@ -686,7 +689,6 @@ section {
   font-style: normal;
   font-size: 2vw;
   color: #333;
-  text-align: center;
 }
 .kmau-main {
   display: flex;
@@ -795,7 +797,7 @@ section {
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-  visibility: hidden;
+  overflow: visible;
 }
 .cursor {
   position: absolute;
