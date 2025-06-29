@@ -121,22 +121,3 @@ document.addEventListener("DOMContentLoaded", () => {
         })();
       });
   });
-const observer = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const h3 = entry.target;
-        h3.style.animation =
-          "typing 2.5s steps(40, end) forwards, blink 0.7s step-end infinite";
-        observer.unobserve(h3); 
-      }
-    });
-  },
-  {
-    threshold: 0.6,
-  }
-);
-
-document.querySelectorAll(".kmau-main-box-h3").forEach((h3) => {
-  observer.observe(h3);
-});
