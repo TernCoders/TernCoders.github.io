@@ -131,13 +131,13 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
-body,
 html {
-  overflow-x: hidden;
   scroll-behavior: smooth;
-}
-html {
+  overflow-x: hidden;
   scroll-padding-top: 5vw;
+}
+body {
+  font-size: 0;
 }
 img {
   width: auto;
@@ -145,9 +145,6 @@ img {
 }
 strong {
   font-weight: 700;
-}
-body {
-  background-color: #fff;
 }
 nav {
   position: fixed;
@@ -789,42 +786,16 @@ section {
   filter: blur(1.5vw);
 }
 .kmau-main-box-h3 {
-  font-size: 1.9vw;
-  white-space: nowrap;
+  display: inline-block;
+  font-size: 2vw;
+  padding-block: 1vw;
   overflow: hidden;
-  width: 0;
-  opacity: 0;
-  padding-block: 1.5vw;
+  white-space: nowrap;
   font-family: Sora, sans-serif;
-  animation: none;
-}
-.about-intro {
-  font-size: 1.5vw;
-  line-height: 1.8;
-  color: #333;
-  text-align: center;
-  padding: 2vw 4vw;
-  background-color: #fdfdfd;
-  border-radius: 1.5vw;
-  width: 90%;
-  margin: 2vw auto;
-  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.05);
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-    opacity: 1;
-  }
-  to {
-    width: 100%;
-    opacity: 1;
-  }
-}
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  visibility: hidden;
 }
 .cursor {
   position: absolute;
@@ -834,6 +805,11 @@ section {
   background-color: #000;
   animation: blink 0.3s step-end infinite;
   pointer-events: none;
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 .kmau-main-box-p {
   font-size: 1.2vw;
@@ -1565,7 +1541,6 @@ span.root-top::before {
   }
   .kmau-main-box-h3 {
     font-size: 3.5vw;
-    padding-block: none;
     animation: none;
     white-space: normal;
   }
